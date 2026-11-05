@@ -73,11 +73,12 @@ def display_station_stats(ls, sh):
 
 def main():
 
-    hours_remaining = 10
     r = reactor.Reactor()
     ls = lifesupport.LifeSupport()
     sh = shields.Shields()
     cs = cooling.Cooling()
+
+    hours_remaining = 10
     station_operational = True
 
     game_intro()
@@ -105,7 +106,7 @@ def main():
             result = cs.repair()
             print(result)
 
-        # Keeps the same turn if player chooses to repair a system but there is insufficient power
+        # Keeps the same turn (hours) if player chooses to repair a system without sufficient power.
         if result == "Insufficient reactor power!":
             continue
 
