@@ -2,8 +2,12 @@ from system import System
 from reactor import Reactor
 
 class Shields(System):
-    """Station's shield system."""
-    
+    """Station's deflector shield system.
+
+    Attributes:
+        shields (int): the percentage of shields remaining (0-100).
+    """
+
     def __init__(self):
         """Initializes the shields with 50%."""
         self._shields = 50

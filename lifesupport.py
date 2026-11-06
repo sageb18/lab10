@@ -2,10 +2,14 @@ from system import System
 from reactor import Reactor
 
 class LifeSupport(System):
-    """Station's oxygen life support system."""
-    
+    """Station's oxygen life support system.
+
+    Attributes:
+        oxygen (int): the percentage of safe levels of oxygen (0-100).
+    """
+
     def __init__(self):
-        """Initializes the shields with 80% oxygen."""
+        """Initializes the life support with 80% oxygen."""
         self._oxygen = 80
 
     @property
